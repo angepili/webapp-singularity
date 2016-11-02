@@ -16,13 +16,16 @@
   "author": "Angelo Pili",
   "license": "ISC",
   "dependencies": {
+    "ansi-styles": "^2.2.1",
     "browser-sync": "^2.17.5",
+    "css-reset-and-normalize-sass": "^0.1.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.13",
     "gulp-image": "^2.7.2",
     "gulp-sass": "^2.3.2",
+    "gulp-useref": "^3.1.2",
     "susy": "^2.2.12"
   }
 }

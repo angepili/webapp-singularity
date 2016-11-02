@@ -5,11 +5,21 @@ html {
 }
 
 .container {
-     @include container(12);
+     @include container;
      .col {
-         @include span(6 at 12);
-         &:last-child {
-             @include last;
-         }
+        @include span(12);
+         background: orange;
+         @include susy-media(768px) {
+             @include span(4);
+        }
+        &:first-child {
+            background-color: blue;
+        }
+        &:last-child {
+            background-color: green;
+            @include susy-media(768px) {
+                @include last;
+            }
+        }
      }
 }

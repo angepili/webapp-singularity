@@ -4,6 +4,7 @@ var gulp            = require('gulp'),
     cleanCss        = require('gulp-clean-css'),
     useref          = require('gulp-useref'),
     image           = require('gulp-image'),
+    ansi            = require('ansi-styles'),
     browserSync     = require('browser-sync');
 
 gulp.task('image', function () {
@@ -21,7 +22,10 @@ gulp.task('style',function(){
     gulp.src('./app/assets/sass/*.scss')
         .pipe(sass({
           outputStyle: 'compressed',
-          includePaths: ['node_modules/susy/sass']
+          includePaths: [
+              'node_modules/susy/sass',
+              '/node_modules/css-reset-and-normalize-sass/scss'
+              ]
         }).on('error',sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
