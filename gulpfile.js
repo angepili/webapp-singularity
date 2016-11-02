@@ -19,7 +19,10 @@ gulp.task('html',function(){
 
 gulp.task('style',function(){
     gulp.src('./app/assets/sass/*.scss')
-        .pipe(sass().on('error',sass.logError))
+        .pipe(sass({
+          outputStyle: 'compressed',
+          includePaths: ['node_modules/susy/sass']
+        }).on('error',sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false

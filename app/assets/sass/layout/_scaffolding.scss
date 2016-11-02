@@ -3,3 +3,13 @@ html {
         font-family: $fontDefault;
     }
 }
+
+.container {
+     @include container(12);
+     .col {
+         @include span(6 at 12);
+         &:last-child {
+             @include last;
+         }
+     }
+}
