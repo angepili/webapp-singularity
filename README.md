@@ -1,1 +1,2 @@
-# webapp-singularity
+# WebApp-susy
+## scaffolding with Susy
